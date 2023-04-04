@@ -21,8 +21,20 @@ public class Folder extends Stationary {
         return "Label added";
     }
 
+    public void setCompact(boolean compact) {
+        this.compact = compact;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
     public String addPlasticWallet(int numOfPlasticWallets) {
         return numOfPlasticWallets + " plastic wallets added ";
+    }
+
+    public String addEngraving(String yourName){
+        return "Engraving added for " + yourName;
     }
 
     //

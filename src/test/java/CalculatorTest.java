@@ -20,7 +20,14 @@ public class CalculatorTest {
     }
 
     @Test
-    public void canAddBattery(){
+    public void testingScientificCalculator(){
         assertThat(calculator.addBattery()).isEqualTo("No battery needed");
+    }
+
+    @Test
+    public void testingCalculatorThatNeedsBattery(){
+        calculator.setSolar(false);
+        assertThat(calculator.isSolar()).isEqualTo(false);
+        assertThat(calculator.addBattery()).isEqualTo("Battery added");
     }
 }

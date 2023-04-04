@@ -23,13 +23,11 @@ public class StationaryShopTest {
         // cant test arraylist..? assertThat(stationaryShop.getStock()).isEqualTo(0);
         stationaryShop.setName("WHsmith");
         stationaryShop.setTill(55.20);
+        assertThat(stationaryShop.getName()).isEqualTo("WHsmith");
+        assertThat(stationaryShop.getTill()).isEqualTo(55.20);
         // stationaryShop.setStock();
     }
 
-    @Test
-    public void canGetStock(){
-        stationaryShop.setStock(3);
-    }
 
     @Test
     public void canAddStock(){

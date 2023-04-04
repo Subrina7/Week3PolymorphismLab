@@ -7,16 +7,25 @@ public class Calculator extends Stationary {
         this.solar = solar;
     }
 
-    public boolean isSolar(boolean b) {
+
+
+    public boolean isSolar() {
         return this.solar;
     }
 
+    public void setSolar(boolean solar) {
+        this.solar = solar;
+    }
 
     public String addBattery() {
         if (this.solar == true) {
             return "No battery needed";
         }
         return "Battery added";
+    }
+
+    public String addEngraving(String yourName){
+        return "Engraving added for " + yourName;
     }
 
 
