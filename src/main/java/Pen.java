@@ -1,4 +1,6 @@
-public class Pen extends Stationary{
+import Interface.IEngrave;
+
+public class Pen extends Stationary implements IEngrave {
 
     private boolean erasable;
     public Pen(String name, String colour, double price, boolean erasable){

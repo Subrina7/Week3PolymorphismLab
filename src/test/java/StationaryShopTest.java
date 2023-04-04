@@ -15,7 +15,6 @@ public class StationaryShopTest {
     public void shopStartsEmpty(){
         assertThat(stationaryShop.countStock()).isEqualTo(0);
     }
-
     @Test
     public void gettersAndSetters(){
         assertThat(stationaryShop.getName()).isEqualTo("Rymans");
@@ -27,8 +26,6 @@ public class StationaryShopTest {
         assertThat(stationaryShop.getTill()).isEqualTo(55.20);
         // stationaryShop.setStock();
     }
-
-
     @Test
     public void canAddStock(){
         Pen pen1 = new Pen("Handwriting pen", "Black", 3, false);
@@ -36,6 +33,22 @@ public class StationaryShopTest {
         stationaryShop.addStock(pen1);
         stationaryShop.addStock(pen2);
         assertThat(stationaryShop.countStock()).isEqualTo(2);
+    }
+
+    @Test //INTERFACE METHOD OMG??
+    public void canEngrave(){
+        Pen pen1 = new Pen("Handwriting pen", "Black", 3, false);
+        assertThat(pen1.addEngraving("Subrina")).isEqualTo("Engraving added for Subrina");
+        Calculator calc = new Calculator("Casio", "Blue", 10, true);
+        assertThat(calc.addEngraving("Imaan")).isEqualTo("Engraving added for Imaan");
+    }
+
+    @Test // OVERLOADING INTERFACE METHOD IN CALCULATOR..???!!
+    public void canOverloadEngraving(){
+        Calculator calc = new Calculator("Digital", "Black", 7, false);
+        assertThat(calc.addEngraving("Subrina", "SF123")).isEqualTo("Engraving added for Subrina, student number: SF123");
+
+
     }
 
 

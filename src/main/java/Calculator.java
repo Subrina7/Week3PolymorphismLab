@@ -1,4 +1,6 @@
-public class Calculator extends Stationary {
+import Interface.IEngrave;
+
+public class Calculator extends Stationary implements IEngrave {
 
     private boolean solar;
 
@@ -27,6 +29,14 @@ public class Calculator extends Stationary {
     public String addEngraving(String yourName){
         return "Engraving added for " + yourName;
     }
+
+    //overload..?
+    public String addEngraving(String yourName, String studentID){
+        return "Engraving added for " + yourName + ", student number: "+ studentID;
+    }
+
+
+
 
 
 

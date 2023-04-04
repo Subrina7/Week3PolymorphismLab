@@ -1,4 +1,6 @@
-public class Folder extends Stationary {
+import Interface.IEngrave;
+
+public class Folder extends Stationary implements IEngrave {
 
     private boolean compact;
     private String material;
